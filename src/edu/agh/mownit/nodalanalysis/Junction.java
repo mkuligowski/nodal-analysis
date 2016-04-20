@@ -7,10 +7,24 @@ import java.util.List;
  * Created by mkuligowski on 17.04.16.
  */
 public class Junction {
+    private static int index = 0;
+
+    public int getCurrentIndex() {
+        return currentIndex;
+    }
+
+    private int currentIndex;
+    public static final String START_JUNCTION = "S";
+    public static final String END_JUNCTION = "E";
     private String label;
     private double voltage;
     private boolean isReferenceNode;
     private List<Branch> branches = new ArrayList<>();
+
+
+    public Junction(){
+        currentIndex = index++;
+    }
 
     public String getLabel() {
         return label;

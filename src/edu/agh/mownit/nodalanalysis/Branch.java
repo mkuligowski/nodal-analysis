@@ -11,6 +11,27 @@ public class Branch {
     private double resistance;
     private double current;
     private double source;
+    private double extraStartVoltage;
+    private double extraEndVoldate;
+
+    public double getExtraStartVoltage() {
+        return extraStartVoltage;
+    }
+
+    public double getExtraEndVoldate() {
+        return extraEndVoldate;
+    }
+
+    public void setExtraStartVoltage(double extraStartVoltage) {
+        this.extraStartVoltage = extraStartVoltage;
+    }
+
+    public void setExtraEndVoldate(double extraEndVoldate) {
+        this.extraEndVoldate = extraEndVoldate;
+    }
+
+
+
 
 
     public Junction getStartNode() {
@@ -58,5 +79,12 @@ public class Branch {
     @Override
     public String toString(){
         return String.format("Start %s - To %s", startNode.getLabel(), endNode.getLabel());
+    }
+
+    public double getExtraVoltage(Junction anotherJunction) {
+        if(anotherJunction == startNode)
+            return extraStartVoltage;
+        else
+            return extraEndVoldate;
     }
 }

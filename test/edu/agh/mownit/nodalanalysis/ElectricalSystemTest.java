@@ -75,6 +75,7 @@ public class ElectricalSystemTest {
 
 
         ElectricalSystem electricalSystem = new ElectricalSystem(branches,junctions);
+        electricalSystem.assignSourcePower(100, branch1, Junction.START_JUNCTION);
         electricalSystem.calculateVoltages();
 
         assertEquals(20.13,junction1.getVoltage(),0.1);
