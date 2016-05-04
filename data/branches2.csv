@@ -1,0 +1,12 @@
+J1,J6,5,branch1
+J1,J6,30,branch2
+J1,J4,10,branch3
+J4,J7,20,branch4
+J6,J7,50,branch5
+J4,J7,10,branch6
+J1,J2,100,branch7
+J2,J5,100,branch8
+J2,J3,100,branch9
+J3,J4,100,branch10
+J3,J5,100,branch11
+J3,J5,100,branch12

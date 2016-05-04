@@ -1,4 +1,4 @@
-package edu.agh.mownit.nodalanalysis;
+package edu.agh.mownit.nodalanalysis.nodalanalysis;
 
 /**
  * Created by mkuligowski on 17.04.16.
@@ -12,22 +12,23 @@ public class Branch {
     private double current;
     private double source;
     private double extraStartVoltage;
-    private double extraEndVoldate;
+    private double extraEndVoltage;
+    private String label;
 
     public double getExtraStartVoltage() {
         return extraStartVoltage;
     }
 
-    public double getExtraEndVoldate() {
-        return extraEndVoldate;
+    public double getExtraEndVoltage() {
+        return extraEndVoltage;
     }
 
     public void setExtraStartVoltage(double extraStartVoltage) {
         this.extraStartVoltage = extraStartVoltage;
     }
 
-    public void setExtraEndVoldate(double extraEndVoldate) {
-        this.extraEndVoldate = extraEndVoldate;
+    public void setExtraEndVoltage(double extraEndVoltage) {
+        this.extraEndVoltage = extraEndVoltage;
     }
 
 
@@ -76,15 +77,26 @@ public class Branch {
         return source;
     }
 
-    @Override
-    public String toString(){
-        return String.format("Start %s - To %s", startNode.getLabel(), endNode.getLabel());
-    }
-
     public double getExtraVoltage(Junction anotherJunction) {
         if(anotherJunction == startNode)
             return extraStartVoltage;
         else
-            return extraEndVoldate;
+            return extraEndVoltage;
+    }
+
+    public String getEndNodeLabel() {
+        return endNode.getLabel();
+    }
+
+    public String getStartNodeLabel() {
+        return startNode.getLabel();
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public String getLabel() {
+        return label;
     }
 }
