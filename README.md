@@ -14,7 +14,7 @@ edu.agh.mownit.nodalanalysis.nodalanalysis.Application
  ElectricalSystem electricalSystem = new ElectricalSystem();
  electricalSystem.loadJunctions("data/junctions.csv");
  electricalSystem.loadBranches("data/branches.csv");
- electricalSystem.putSourcePowe(100,"branch1",Junction.START_JUNCTION);
+ electricalSystem.putSourcePower(100,"branch1",Junction.START_JUNCTION);
  electricalSystem.doNodalAnalysis();
  CircuitDrawer.drawGraph(electricalSystem);
 ```
