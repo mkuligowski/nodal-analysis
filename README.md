@@ -5,7 +5,9 @@ Hello!
 This is simple implementation of the nodal analysis algorithm.
 
 The most important part of code is located in 
-``` edu.agh.mownit.nodalanalysis.nodalanalysis.Application```
+```java
+edu.agh.mownit.nodalanalysis.nodalanalysis.Application
+```
 
 
 ```java
